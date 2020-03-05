@@ -16,6 +16,7 @@ function bs() {
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
+  watch("./sass/**/*.scss", serveSass);
   watch("./css/style.css", mincss).on('change', browserSync.reload);
   watch("./js/*.js").on('change', browserSync.reload);
 };
@@ -29,7 +30,7 @@ function bs() {
   };
 
   function serveSass() {
-    return src("./sass/*.sass")
+    return src("./sass/**/*.sass","./sass/**/*.scss")
       .pipe(sass())
       .pipe(autoprefixer({
         cascade: true
