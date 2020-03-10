@@ -352,6 +352,14 @@ img {
         width: 32px;
         height: 2px;
         background-color: #E3B873; }
+    .section-title__text {
+      text-align: center;
+      font-family: 'Futura Book', sans-serif;
+      text-transform: none;
+      font-size: 1.43rem;
+      line-height: 1.93rem;
+      max-width: 740px;
+      margin: 1.1rem auto 2.78rem auto; }
 
 .button {
   padding: 11px 24px;
@@ -551,6 +559,8 @@ img {
   background-color: #E3B873;
   color: #fff;
   padding: 1.214rem 2.6rem; }
+  .card__pricetag--long {
+    padding: 1.214rem 4rem; }
 
 @media screen and (max-width: 1200px) {
   html {
