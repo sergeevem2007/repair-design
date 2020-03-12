@@ -687,6 +687,18 @@ img {
   .modal__button {
     align-self: flex-end; }
 
+.design {
+  position: relative; }
+  .design::after {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    content: '';
+    background: url("../img/background-lines.svg") no-repeat center, #131313;
+    height: 50%;
+    width: 100%;
+    z-index: -99; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -710,7 +722,17 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .design .section-title__heading, .design .section-title__text {
+    color: #fff; }
+  .design__card {
+    margin-bottom: 7rem; }
+  .design::after {
+    top: 0;
+    height: 100%;
+    background: #131313; }
+  .design .card_item:nth-child(n+6) {
+    display: none; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
