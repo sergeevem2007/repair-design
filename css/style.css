@@ -423,6 +423,38 @@ img {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.scroll-top {
+  display: inline-block;
+  background-color: #131313;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000; }
+  .scroll-top::after {
+    content: '';
+    display: block;
+    background: url("../img/arrow-down.svg") no-repeat center;
+    transform: rotate(180deg);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #E3B873;
+    border-radius: 50%;
+    margin: 9px auto; }
+  .scroll-top:hover {
+    cursor: pointer;
+    background-color: #131313; }
+
+.show {
+  opacity: 1;
+  visibility: visible; }
+
 .header {
   position: fixed;
   top: 0;
