@@ -326,8 +326,14 @@ template {
 .col-30 {
   flex-basis: 30%; }
 
+.col-35 {
+  width: 35%; }
+
 .col-50 {
   width: 50%; }
+
+.col-65 {
+  width: 65%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -779,6 +785,30 @@ img {
     height: 50%;
     width: 100%;
     z-index: -99; }
+
+.goal {
+  position: relative; }
+  .goal::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url("../img/background-lines.svg") no-repeat center, #131313;
+    height: 100%;
+    width: 100%;
+    z-index: -99; }
+  .goal .section-title__word::after {
+    margin-left: 5rem; }
+  .goal .swiper-slide__number {
+    font-size: 1.285rem;
+    font-family: 'Yeseva One', cursive;
+    margin-top: 6.57rem;
+    display: block; }
+  .goal .swiper-slide__value {
+    display: block;
+    width: 24rem;
+    font-size: 1.07rem;
+    line-height: 1.78rem; }
 
 .video {
   min-height: 100vh;

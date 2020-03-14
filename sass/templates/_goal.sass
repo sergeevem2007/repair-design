@@ -1,0 +1,26 @@
+.goal
+  position: relative
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    background: url('../img/background-lines.svg') no-repeat center , $dark
+    height: 100%
+    width: 100%
+    z-index: -99
+  .section-title__word
+    &::after
+      margin-left: 5rem
+  .swiper
+    &-slide
+      &__number
+        font-size: 1.285rem
+        font-family: 'Yeseva One', cursive
+        margin-top: 6.57rem
+        display: block
+      &__value
+        display: block
+        width: 24rem
+        font-size: 1.07rem
+        line-height: 1.78rem
