@@ -323,6 +323,12 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  width: 50%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -773,6 +779,14 @@ img {
     height: 50%;
     width: 100%;
     z-index: -99; }
+
+.video {
+  min-height: 100vh;
+  width: 100%;
+  display: table; }
+
+.wrap-block {
+  display: table-cell; }
 
 @media screen and (max-width: 1200px) {
   html {

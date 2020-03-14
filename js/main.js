@@ -48,7 +48,7 @@ $(document).ready(function () {
   });
   
   var next = $('.swiper-button-next');
-  var prev= $('.swiper-button-prev');
+  var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
   next.css('left', prev.width()+10+bullets.width()+10);
