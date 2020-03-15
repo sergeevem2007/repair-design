@@ -789,6 +789,7 @@ img {
     z-index: -99; }
 
 .goal {
+  display: none;
   position: relative; }
   .goal::before {
     position: absolute;

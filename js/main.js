@@ -54,24 +54,6 @@ $(document).ready(function () {
   next.css('left', prev.width()+10+bullets.width()+10);
   bullets.css('left', prev.width()+10);
 
-  var mySwiper2 = new Swiper ('.swiper-container2', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination2',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
-  });
-  
-  var next2 = $('.swiper-button-next2');
-  var prev2 = $('.swiper-button-prev2');
-  var bullets2 = $('.swiper-pagination2');
-
-  next2.css('left', prev2.width()+10+bullets2.width()+10);
-  bullets2.css('left', prev2.width()+10);
 });
 
 
