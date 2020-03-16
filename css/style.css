@@ -588,7 +588,8 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    background-color: #131313; }
+    background-color: #131313;
+    z-index: 1; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -629,8 +630,11 @@ img {
     color: #E3B873; }
 
 .projects {
+  margin-top: -50px;
+  padding-top: 110px;
   padding-bottom: 30rem;
-  position: relative; }
+  position: relative;
+  z-index: 0; }
   .projects::before {
     position: absolute;
     top: 0;
