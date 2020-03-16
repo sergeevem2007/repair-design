@@ -18,6 +18,8 @@
   .row
     flex-direction: column
     align-items: center
+  .col-30
+    width: 100%
   .types
     &__card
       margin-bottom: 5rem
@@ -59,6 +61,41 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+  .projects
+    &::before
+      background: $dark
+    .row
+      align-items: start
+  .section-title__word
+    &::after
+      display: none
+  .col-50
+    width: 100%
+  .swiper
+    &-slide
+      width: 100%
+      img
+        margin-top: 3rem
+  .control
+    background-color: $dark
+    color: $light
+    &__video
+      min-height: 15rem
+      img
+        width: 6rem
+    &__form
+      flex-direction: column
+    &__input-group
+      margin: 2rem 0
+    &__policy
+      margin: 0
+      &-label
+        justify-content: flex-start
+        margin-bottom: 4.42rem
+    &__button
+      order: 5
+      margin-bottom: -81px
+    
 @media ( min-width: 320px ) and ( max-width: 575px )
   .nav
     display: none
