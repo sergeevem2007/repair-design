@@ -56,6 +56,116 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  $('.modal__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      userPhone: "required",
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userQuestion: {
+        required: true,
+        minlength: 2,
+      },
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле имя",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле телефон",
+      userEmail: {
+        required: "Заполните поле email",
+        email: "Введите в формате name@domain.com"
+      },
+      userQuestion: {
+        required: "Заплните поле вопрос",
+        minlength: "Вопрос не короче двух букв"
+      },
+    }
+  });
+  $('.footer__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      userPhone: "required",
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userQuestion: {
+        required: true,
+        minlength: 2,
+      },
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле имя",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле телефон",
+      userEmail: {
+        required: "Заполните поле email",
+        email: "Введите в формате name@domain.com"
+      },
+      userQuestion: {
+        required: "Заплните поле вопрос",
+        minlength: "Вопрос не короче двух букв"
+      },
+    }
+  });
+  $('.control__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      userPhone: "required",
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userQuestion: {
+        required: true,
+        minlength: 2,
+      },
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле имя",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле телефон",
+      userEmail: {
+        required: "Заполните поле email",
+        email: "Введите в формате name@domain.com"
+      },
+      userQuestion: {
+        required: "Заплните поле вопрос",
+        minlength: "Вопрос не короче двух букв"
+      },
+    }
+  });
+
+  $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });
 
 
