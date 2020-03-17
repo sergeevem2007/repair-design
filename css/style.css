@@ -361,6 +361,11 @@ img {
       text-align: left; }
     .section-title--light {
       color: #fff; }
+    .section-title__subtitle {
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase; }
     .section-title__heading {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
@@ -375,7 +380,7 @@ img {
         width: 90px;
         height: 2px;
         background-color: #E3B873;
-        margin-left: 2rem; }
+        margin-left: 5rem; }
     .section-title__text {
       font-size: 1.28rem;
       line-height: 2.07rem;
@@ -861,8 +866,7 @@ input.invalid {
   border-bottom: 1px solid tomato; }
 
 .design {
-  position: relative;
-  padding-bottom: 30rem; }
+  position: relative; }
   .design::after {
     position: absolute;
     top: 52%;
@@ -874,7 +878,6 @@ input.invalid {
     z-index: -99; }
 
 .goal {
-  display: none;
   position: relative; }
   .goal::before {
     position: absolute;
@@ -907,47 +910,46 @@ input.invalid {
     display: block;
     width: 9.7rem;
     margin-bottom: 2.57rem; }
-  .goal .section-title__word::after {
-    margin-left: 5rem; }
-  .goal .swiper-slide {
+  .goal .slider {
     display: flex;
     flex-wrap: wrap; }
-    .goal .swiper-slide__number {
+    .goal .slider__number {
       font-size: 1.285rem;
       font-family: 'Yeseva One', cursive;
       margin-top: 6.57rem;
       display: block; }
-    .goal .swiper-slide__value {
+    .goal .slider__heading {
+      font-size: 1.07rem;
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      color: #E3B873; }
+    .goal .slider__value {
       display: block;
       width: 24rem;
       font-size: 1.07rem;
       line-height: 1.78rem; }
-  .goal .swiper-button-prev2, .goal .swiper-button-next2 {
+  .goal-button-prev2, .goal-button-next2 {
     bottom: 0;
     top: auto;
     width: 42px;
     height: 14px;
     display: flex; }
-    .goal .swiper-button-prev2::after, .goal .swiper-button-next2::after {
+    .goal-button-prev2::after, .goal-button-next2::after {
       display: none; }
-  .goal .swiper-button-prev2 {
+  .goal-button-prev2 {
     left: 0;
     margin-right: 10px;
     background: url("../img/arrow-prev.png") no-repeat center; }
-  .goal .swiper-button-next2 {
+  .goal-button-next2 {
     background: url("../img/arrow-next.png") no-repeat center;
     margin-left: 10px; }
-  .goal .swiper-pagination-bullet {
+  .goal-pagination-bullet {
     background-color: rgba(255, 255, 255, 0.3);
     margin: 0 4px; }
-    .goal .swiper-pagination-bullet-active {
+    .goal-pagination-bullet-active {
       background-color: #fff; }
-  .goal .swiper-navigation {
+  .goal-navigation {
     display: flex; }
-
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  width: auto;
-  bottom: -2px; }
 
 .video-bg {
   min-height: 100vh;
