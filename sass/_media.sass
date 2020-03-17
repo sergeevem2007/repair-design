@@ -38,6 +38,13 @@
     .card_item
       &:nth-child(n+6)
         display: none
+  .footer
+    background: $dark
+    &__wrap
+      background-color: $dark
+      padding: 0
+    &__input-group
+      flex-basis: 100%
         
 @media screen and ( max-width: 576px )
   .contacts
@@ -120,6 +127,9 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+  .footer
+    &__menu
+      display: none
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
