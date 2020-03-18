@@ -959,7 +959,8 @@ input.invalid {
     left: 12px;
     width: 70px;
     height: 70px;
-    background-color: #E3B873; }
+    background-color: #E3B873;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
   .card__text--center {
     width: 66%;
     margin-top: -5.5rem; }
@@ -1015,13 +1016,60 @@ input.invalid {
   justify-content: center;
   align-items: center; }
 
-.video-bg {
-  min-height: 100vh;
-  width: 100%;
-  display: table; }
+.item {
+  display: flex; }
 
-.wrap-block {
-  display: table-cell; }
+.clients {
+  padding-bottom: 30rem; }
+  .clients__img {
+    border-radius: 50%;
+    margin-right: 2rem;
+    margin-left: 1.5rem; }
+  .clients__name {
+    font-size: 1.285rem;
+    font-family: 'Yeseva One', cursive;
+    line-height: 1.64rem; }
+  .clients__text {
+    max-width: 24rem;
+    font-size: 1.07rem;
+    line-height: 180%;
+    color: #959595;
+    margin-left: 1.5rem;
+    margin-bottom: 3.57rem; }
+  .clients__size {
+    display: inline-block;
+    position: relative;
+    background-color: #E3B873;
+    color: #fff;
+    font-size: 1.21rem;
+    font-family: 'Yeseva One', cursive;
+    padding: 1.214rem 1rem 1.214rem 4.64rem;
+    margin-bottom: 2rem; }
+    .clients__size::before {
+      content: '';
+      position: absolute;
+      left: 14%;
+      top: 23%;
+      background: url("../img/clients/size.svg") no-repeat center;
+      width: 2rem;
+      height: 2rem; }
+  .clients__day {
+    display: inline-block;
+    position: relative;
+    background-color: #E3B873;
+    color: #fff;
+    font-size: 1.21rem;
+    font-family: 'Yeseva One', cursive;
+    padding: 1.214rem 2.214rem 1.214rem 4.64rem;
+    margin-bottom: 2rem; }
+    .clients__day::before {
+      content: '';
+      position: absolute;
+      left: 14%;
+      top: 23%;
+      background: url("../img/clients/day.svg") no-repeat center;
+      width: 2rem;
+      height: 2rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -1030,7 +1078,7 @@ input.invalid {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-top: 20rem;
+    margin-top: -20rem;
     margin-bottom: 3.714rem;
     padding: 2.5rem; }
   .footer__title {
@@ -1066,9 +1114,32 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__text {
+    display: block;
+    text-align: center;
+    font-size: 1.428rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    color: #E3B873;
+    max-width: 42rem;
+    margin: 0 auto;
+    margin-top: 3.714rem;
+    margin-bottom: 2rem; }
+  .footer__link {
+    margin: 0.5rem;
+    margin-bottom: 2rem; }
   .footer__map {
     margin-bottom: 4rem;
     min-height: 465px; }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -1106,13 +1177,36 @@ input.invalid {
     background: #131313; }
   .design .card_item:nth-child(n+6) {
     display: none; }
-  .footer {
+  .team {
     background: #131313; }
+    .team::before {
+      display: none; }
+    .team__card {
+      margin-bottom: 9rem; }
+    .team__text {
+      display: none; }
+  .card__sup {
+    left: -38px; }
+  .card__image {
+    margin: 0; }
+  .card__text--center {
+    width: 36%; }
+  .footer {
+    background: #131313;
+    padding-top: 20rem; }
     .footer__wrap {
       background-color: #131313;
       padding: 0; }
     .footer__input-group {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+    .footer__title {
+      padding-top: 2rem; }
+    .footer__text {
+      order: 5; }
+    .footer__map {
+      order: 3; }
+  .social {
+    order: 5; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -1164,7 +1258,9 @@ input.invalid {
         margin-bottom: 4.42rem; }
     .control__button {
       order: 5;
-      margin-bottom: -81px; } }
+      margin-bottom: -81px; }
+  .clients {
+    display: none; } }
 
 @media (min-width: 320px) and (max-width: 575px) {
   .nav {
@@ -1188,6 +1284,13 @@ input.invalid {
     display: block;
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
+  .card__sup {
+    left: 0; }
+  .card__image {
+    margin-left: 2.5rem; }
+  .card__text--center {
+    width: 85%;
+    margin-left: 2.5rem; }
   .footer__menu {
     display: none; } }
 
