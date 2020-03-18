@@ -359,7 +359,8 @@ img {
     .section-title--left {
       text-align: left; }
     .section-title--light {
-      color: #fff; }
+      color: #fff;
+      position: relative; }
     .section-title__subtitle {
       font-size: 1.07rem;
       line-height: 1.5rem;
@@ -1065,6 +1066,9 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    margin-bottom: 4rem;
+    min-height: 465px; }
 
 @media screen and (max-width: 1200px) {
   html {
