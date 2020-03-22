@@ -100,6 +100,19 @@ $(document).ready(function () {
         required: "Заплните поле вопрос",
         minlength: "Вопрос не короче двух букв"
       },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера' + response);
+          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
+          $(form)[0].reset();
+          modal.toggleClass('modal--visible');
+        }
+      });
     }
   });
   $('.footer__form').validate({
@@ -136,6 +149,19 @@ $(document).ready(function () {
         required: "Заплните поле вопрос",
         minlength: "Вопрос не короче двух букв"
       },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера' + response);
+          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
+          $(form)[0].reset();
+          modal.toggleClass('modal--visible');
+        }
+      });
     }
   });
   $('.control__form').validate({
@@ -172,6 +198,19 @@ $(document).ready(function () {
         required: "Заплните поле вопрос",
         minlength: "Вопрос не короче двух букв"
       },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера' + response);
+          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
+          $(form)[0].reset();
+          modal.toggleClass('modal--visible');
+        }
+      });
     }
   });
 
