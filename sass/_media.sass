@@ -27,21 +27,18 @@
     &__text
       margin-left: 0
   .design
+    background: $dark
     .section-title__heading , .section-title__text
       color: $light
     &__card
       margin-bottom: 7rem
     &::after
-      top: 0
-      height: 100%
-      background: $dark
+      display: none
     .card_item
       &:nth-child(n+6)
         display: none
   .team
     background: $dark
-    &::before
-      display: none
     &__card
       margin-bottom: 9rem
     &__text
@@ -54,6 +51,8 @@
     &__text
       &--center
         width: 36%
+  .clients
+    padding: 0
   .footer
     background: $dark
     padding-top: 20rem

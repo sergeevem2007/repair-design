@@ -54,16 +54,6 @@ $(document).ready(function () {
   next.css('left', prev.width()+10+bullets.width()+10);
   bullets.css('left', prev.width()+10);
 
-  
-
-  $('.slider-wrapper').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-  });
-  
-
   new WOW().init();
 
   $('.modal__form').validate({
@@ -245,8 +235,8 @@ $(document).ready(function () {
             iconImageOffset: [-5, -38]
         });
 
-    myMap.geoObjects
-        .add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
   });
 });
 

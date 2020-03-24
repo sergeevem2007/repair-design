@@ -3,14 +3,14 @@
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -369,6 +369,7 @@ img {
     .section-title__heading {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
+      font-weight: normal;
       line-height: 136.8%; }
       .section-title__heading--primary {
         color: #E3B873; }
@@ -646,10 +647,10 @@ img {
   z-index: 0; }
   .projects::before {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     content: '';
-    background: url("../img/background-lines.svg") no-repeat center, #131313;
+    background: url("../img/background-lines.svg") no-repeat center/cover, #131313;
     height: 100%;
     width: 100%;
     z-index: -99; }
@@ -872,84 +873,10 @@ input.invalid {
     top: 52%;
     left: 0;
     content: '';
-    background: url("../img/background-lines.svg") no-repeat center, #131313;
-    height: 50%;
-    width: 100%;
-    z-index: -99; }
-
-.goal {
-  position: relative; }
-  .goal::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    background: url("../img/background-lines.svg") no-repeat center, #131313;
+    background: url("../img/background-lines.svg") no-repeat center/cover, #131313;
     height: 100%;
     width: 100%;
     z-index: -99; }
-  .goal__number {
-    position: relative;
-    font-size: 1.07rem;
-    font-family: 'Yeseva One', cursive;
-    color: rgba(255, 255, 255, 0.3);
-    margin-bottom: 0.8rem; }
-    .goal__number::after {
-      position: absolute;
-      content: '';
-      width: 1.07rem;
-      height: 2px;
-      background-color: rgba(227, 184, 115, 0.3);
-      display: block;
-      z-index: 1;
-      padding-top: 0.5rem2; }
-  .goal__description {
-    font-size: 1.07rem;
-    line-height: 1.78rem;
-    color: rgba(255, 255, 255, 0.3);
-    display: block;
-    width: 9.7rem;
-    margin-bottom: 2.57rem; }
-  .goal .slider {
-    display: flex;
-    flex-wrap: wrap; }
-    .goal .slider__number {
-      font-size: 1.285rem;
-      font-family: 'Yeseva One', cursive;
-      margin-top: 6.57rem;
-      display: block; }
-    .goal .slider__heading {
-      font-size: 1.07rem;
-      font-family: 'Yeseva One', cursive;
-      text-transform: uppercase;
-      color: #E3B873; }
-    .goal .slider__value {
-      display: block;
-      width: 24rem;
-      font-size: 1.07rem;
-      line-height: 1.78rem; }
-  .goal-button-prev2, .goal-button-next2 {
-    bottom: 0;
-    top: auto;
-    width: 42px;
-    height: 14px;
-    display: flex; }
-    .goal-button-prev2::after, .goal-button-next2::after {
-      display: none; }
-  .goal-button-prev2 {
-    left: 0;
-    margin-right: 10px;
-    background: url("../img/arrow-prev.png") no-repeat center; }
-  .goal-button-next2 {
-    background: url("../img/arrow-next.png") no-repeat center;
-    margin-left: 10px; }
-  .goal-pagination-bullet {
-    background-color: rgba(255, 255, 255, 0.3);
-    margin: 0 4px; }
-    .goal-pagination-bullet-active {
-      background-color: #fff; }
-  .goal-navigation {
-    display: flex; }
 
 .card {
   position: relative; }
@@ -992,24 +919,14 @@ input.invalid {
     color: #fff;
     padding: 1.214rem 3.38rem; }
 
-.team {
-  position: relative; }
-  .team::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    background: url("../img/background-lines.svg") no-repeat center, #131313;
-    height: 50%;
-    width: 100%;
-    z-index: -99; }
-  .team__card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-  .team__text {
-    margin-top: 5.14rem;
-    color: #363636; }
+.team__card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.team__text {
+  margin-top: 5.14rem;
+  color: #363636; }
 
 .sup {
   display: flex;
@@ -1072,7 +989,7 @@ input.invalid {
       height: 2rem; }
 
 .footer {
-  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
   .footer__wrap {
     background-color: #181818;
@@ -1167,20 +1084,18 @@ input.invalid {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
-  .design .section-title__heading, .design .section-title__text {
-    color: #fff; }
-  .design__card {
-    margin-bottom: 7rem; }
-  .design::after {
-    top: 0;
-    height: 100%;
+  .design {
     background: #131313; }
-  .design .card_item:nth-child(n+6) {
-    display: none; }
+    .design .section-title__heading, .design .section-title__text {
+      color: #fff; }
+    .design__card {
+      margin-bottom: 7rem; }
+    .design::after {
+      display: none; }
+    .design .card_item:nth-child(n+6) {
+      display: none; }
   .team {
     background: #131313; }
-    .team::before {
-      display: none; }
     .team__card {
       margin-bottom: 9rem; }
     .team__text {
@@ -1191,6 +1106,8 @@ input.invalid {
     margin: 0; }
   .card__text--center {
     width: 36%; }
+  .clients {
+    padding: 0; }
   .footer {
     background: #131313;
     padding-top: 20rem; }
