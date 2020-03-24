@@ -56,6 +56,13 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  $('.nav').on('click','a', function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+});
+
   $('.modal__form').validate({
     errorElement: "div",
     errorClass: "invalid",
