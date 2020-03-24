@@ -36,10 +36,11 @@ function bs() {
     src(['js/**.js' , '!js/**.min.js'])
       .pipe(minify({
         ext:{
-          min: '.js'
-        }
+          min: '.min.js'
+        },
+        ignoreFiles: ['-min.js']
     }))
-      .pipe(dest('dist/js/'));
+      .pipe(dest('js/'));
     src('js/**.min.js').pipe(dest('dist/js/'));
     done();
   };
