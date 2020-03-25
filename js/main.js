@@ -35,6 +35,37 @@ $(document).ready(function () {
       modal.toggleClass('modal--visible');
   }
   });
+
+  $(this).keydown(function(eventObject){
+    if (eventObject.which == 27)
+        $('.modal').removeClass('modal--visible');
+  });
+  
+
+  var thanks = $('.thanks'),
+      thanksDialog = $('.thanks__dialog'),
+      thanksBtn = $('[data-toggle=thanks]'),
+      thanksCloseBtn = $('.thanks__close');
+
+  thanksBtn.on('click', function() {
+    thanks.toggleClass('thanks--visible');
+  });
+  thanksCloseBtn.on('click', function() {
+    thanks.toggleClass('thanks--visible');
+  });
+  thanks.mouseup(function (e){
+    if (!thanksDialog.is(e.target) 
+      && thanksDialog.has(e.target).length === 0) {
+      thanks.toggleClass('thanks--visible');
+  }
+  });
+
+  $(this).keydown(function(eventObject){
+    if (eventObject.which == 27)
+        $('.thanks').removeClass('thanks--visible');
+  });
+  
+
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     pagination: {
@@ -109,6 +140,7 @@ $(document).ready(function () {
         success: function (response) {
           $(form)[0].reset();
           modal.toggleClass('modal--visible');
+          thanks.toggleClass('thanks--visible');
           ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
@@ -156,6 +188,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          thanks.toggleClass('thanks--visible');
           ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
@@ -203,6 +236,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          thanks.toggleClass('thanks--visible');
           ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
@@ -258,12 +292,6 @@ $(document).ready(function () {
     myMap.geoObjects.add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
   });
-});
-
-
-$(this).keydown(function(eventObject){
-  if (eventObject.which == 27)
-      $('.modal').removeClass('modal--visible');
 });
 
 

@@ -32,10 +32,4 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Заявка с тестового сайта';
 $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}.";
 $mail->AltBody = '';
-exit("<meta http-equiv='refresh' content='0; url=http://www.evgen-sergeeev-verstka.ru/thanks.html'>");
-if(!$mail->send()) {
-    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
-} else {
-    exit("<meta http-equiv='refresh' content='0; url=http://www.evgen-sergeeev-verstka.ru/thanks.html'>");
-}
 ?>
