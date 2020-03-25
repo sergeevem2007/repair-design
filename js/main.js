@@ -46,6 +46,9 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+
+  
   
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
@@ -101,13 +104,12 @@ $(document).ready(function () {
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
+        url: "mail.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработал. Ответ сервера' + response);
-          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
           $(form)[0].reset();
           modal.toggleClass('modal--visible');
+          ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
     }
@@ -150,13 +152,11 @@ $(document).ready(function () {
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
+        url: "mail.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработал. Ответ сервера' + response);
-          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
           $(form)[0].reset();
-          modal.toggleClass('modal--visible');
+          ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
     }
@@ -199,19 +199,32 @@ $(document).ready(function () {
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
+        url: "mail.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработал. Ответ сервера' + response);
-          alert('Форма отправилась, мы свяжемся с вами в течение 10 минут')
           $(form)[0].reset();
-          modal.toggleClass('modal--visible');
+          ym(61266316, 'reachGoal', 'submitForm'); return true;
         }
       });
     }
   });
 
   $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+  var player;
+  $('.video__play').on('click' , function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'Y8Q9ptCXzL0',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+    function videoPlay(event) {
+      event.target.playVideo();
+    };
 
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
@@ -268,3 +281,6 @@ scrollTop.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '1500');
 });
+
+
+

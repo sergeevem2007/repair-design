@@ -519,7 +519,8 @@ img {
   justify-content: space-between;
   align-items: center; }
 
-.logo {
+.logo a {
+  text-decoration: none;
   font-size: 1.075rem;
   color: #E3B873;
   text-transform: uppercase; }
@@ -757,7 +758,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -1073,6 +1075,7 @@ input.invalid {
     margin-left: 0; } }
 
 @media screen and (max-width: 768px) {
+  padding: 30px 0;
   .nav {
     display: none; }
   .row {
@@ -1134,17 +1137,19 @@ input.invalid {
     display: none; }
   .title {
     font-size: 1.64rem; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; }
+  .hero {
+    background: #131313 url("../img/hero-bg-sm.jpg") no-repeat center/cover; }
+    .hero__scroll-down {
+      display: none; }
+    .hero__content {
+      max-width: 22.86rem; }
+    .hero__text {
+      font-size: 1.29rem;
+      margin-bottom: 2.28rem; }
+    .hero__button {
+      display: block;
+      min-width: 22.86rem;
+      margin-bottom: 1.85rem; }
   .projects::before {
     background: #131313; }
   .projects .row {
@@ -1180,6 +1185,7 @@ input.invalid {
     display: none; } }
 
 @media (min-width: 320px) and (max-width: 575px) {
+  padding: 15px 0;
   .nav {
     display: none; }
   .contacts__phone {
